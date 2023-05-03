@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Login = () => {
+    const { logInUser } = useContext(AuthContext)
     const [success, setSuccess] = useState();
     const [error, setError] = useState();
     const [show, setShow] = useState();
@@ -12,6 +14,20 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
+
+        setError('')
+        setSuccess('')
+
+        logInUser(email, password)
+            .then(result => {
+                const loggedUser = result.user;
+                form.reset('');
+                setSuccess('Successfully logged in')
+            })
+            .catch(error => {
+                console.log(error);
+                setError(error.message)
+            })
     }
     const handleShowPassword = event => {
         setShow(event.target.checked)
