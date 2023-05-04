@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Card, Col } from 'react-bootstrap';
 import { FaHeart, FaRegStar, FaStar } from 'react-icons/fa';
 import LazyLoad from 'react-lazy-load';
-import Rating from 'react-rating';
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -34,11 +35,7 @@ const RecipeCard = ({recipeDetails}) => {
 
                         <div className='d-flex'>
                         <div className='d-flex align-items-center flex-grow-1'>
-                        <Rating className='text-warning'
-                            placeholderRating={rating}
-                            emptySymbol={<FaRegStar></FaRegStar>}
-                            placeholderSymbol={<FaStar className='text-warning'></FaStar>}
-                            fullSymbol={<FaStar></FaStar>}></Rating>
+                        <Rating style={{ maxWidth: 110 }} value={rating} readOnly/>
                         <small className='ms-2'>{rating}</small>
                     </div>
                     <div>
