@@ -10,6 +10,8 @@ const Register = () => {
     const [error, setError] = useState();
     const [accepted, setAccepted] = useState();
 
+    const navigate = useNavigate()
+
 
     const handleRegister = event => {
         event.preventDefault();
@@ -38,6 +40,7 @@ const Register = () => {
             const createdUser = result.user;
             form.reset('');
             setSuccess('Successfully Added')
+            navigate('/')
         })
         .catch(error => console.log(error.message))
 
