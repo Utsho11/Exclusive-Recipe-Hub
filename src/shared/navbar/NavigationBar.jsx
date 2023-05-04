@@ -6,6 +6,7 @@ import logo from '../header/img/logo.png'
 import { AuthContext } from '../../Provider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { HiMail } from "react-icons/hi";
+import ActiveLink from '../ActiveRoute/ActiveLink';
 
 const NavigationBar = () => {
 
@@ -37,10 +38,10 @@ const NavigationBar = () => {
           </Navbar>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto gap-4 align-items-center">
-              <Nav><Link className='text-decoration-none text-dark'>Home</Link></Nav>
-              <Nav><Link className='text-decoration-none text-dark'>Blog</Link></Nav>
-              <Nav><Link className='text-decoration-none text-dark'>About us</Link></Nav>
+            <Nav className="ms-auto gap-4 align-items-center text-decoration-none">
+              <ActiveLink to='/'><span className='text-dark text-decoration-none'>Home</span></ActiveLink>
+              <ActiveLink to='/blog'><span className='text-dark text-decoration-none'>Blog</span></ActiveLink>
+              <ActiveLink to='/aboutUs'> <span className='text-dark text-decoration-none'>About us</span></ActiveLink>
               {
                 user ?
                 <Button onClick={handleLogOut} variant='secondary' >Sign out</Button>

@@ -24,7 +24,7 @@ const ChefDetails = () => {
     // console.log(chefArray);
 
     return (            
-        <Row lg={3} xs={6} className='g-4 my-4'>
+        <Row lg={3} xs={1} className='g-4 my-4'>
             {
                 loadRecipes.map(recipeDetails =><RecipeCard
                 key={recipeDetails.id}

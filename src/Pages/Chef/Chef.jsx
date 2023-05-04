@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import { FaThumbsUp } from 'react-icons/fa';
+import LazyLoad from 'react-lazy-load';
 import { Link } from 'react-router-dom';
 
 const Chef = (props) => {
@@ -12,7 +13,9 @@ const Chef = (props) => {
     return (
         <Col>
             <Card>
+                <LazyLoad height={300} offset={300}>
                 <Card.Img style={{height: '300px'}} variant="top" src={chef_img} />
+                </LazyLoad>
                 <Card.Body>
                     <Card.Title>
                         <h5>{chef_name}</h5>

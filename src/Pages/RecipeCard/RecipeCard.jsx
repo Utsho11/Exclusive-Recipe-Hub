@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Col } from 'react-bootstrap';
 import { FaHeart, FaRegStar, FaStar } from 'react-icons/fa';
+import LazyLoad from 'react-lazy-load';
 import Rating from 'react-rating';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -17,7 +18,9 @@ const RecipeCard = ({recipeDetails}) => {
     return (
         <Col>
             <Card style={{ maxHeight: '600px', overflow: 'auto' }}>
+                <LazyLoad height={762} offset={300}>
                 <Card.Img style={{ height: '200px' }} variant="top" src={recipe_img} />
+                </LazyLoad>
                 <Card.Body>
                     <Card.Title>
                         <h5>{recipe_name}</h5>
