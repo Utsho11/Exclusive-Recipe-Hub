@@ -8,7 +8,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const RecipeCard = ({recipeDetails}) => {
-    const { recipe_img, recipe_name, ingredients, cooking_method,rating } = recipeDetails;
+    const cardShadow = "0px 0px 10px rgba(0, 0, 0, 0.5)";
+    const { recipe_img, recipe_name, ingredients, cooking_method,rating} = recipeDetails;
 
     const [isOn, setIsOn] = useState(true);
 
@@ -18,7 +19,7 @@ const RecipeCard = ({recipeDetails}) => {
     }
     return (
         <Col>
-            <Card style={{ maxHeight: '600px', overflow: 'auto' }}>
+            <Card style={{ maxHeight: '600px', overflow: 'auto', boxShadow: cardShadow  }}>
                 <LazyLoad height={762} offset={300}>
                 <Card.Img style={{ height: '200px' }} variant="top" src={recipe_img} />
                 </LazyLoad>

@@ -5,6 +5,8 @@ import food from './image/Food.jpg';
 import text from './image/Text.png'
 import LazyLoad from 'react-lazy-load';
 import { Button } from 'react-bootstrap';
+import Banner1 from '../Banner/Banner1';
+import Banner2 from '../Banner/Banner2';
 const Home = () => {
 
     const [chefs,setChefs] = useState([]);
@@ -15,6 +17,7 @@ const Home = () => {
         .then(data => setChefs(data))
     },[])
 
+    console.log(chefs);
     console.log(chefs);
     return (
         <div>
@@ -27,7 +30,9 @@ const Home = () => {
                     <Button style={{position:'absolute',bottom:'-100px',right:'460px'}} variant='warning'>Find Out Recipe</Button>
                 </div>
             </div>
-            <h2 className='text-center'>Meet With Our Chefs</h2>
+            <h1 className='text-center my-5'>Website Status:</h1>
+            <Banner1></Banner1>
+            <h2 className='text-center my-5'>Meet With Our Chefs</h2>
             <Row lg={3} xs={1} className='g-4 my-4'>
                     {
                         chefs.map(chef => <Chef
@@ -36,6 +41,8 @@ const Home = () => {
                     }               
 
             </Row>
+            <h1 className='text-center m-5'>Website Reviews:</h1>
+            <Banner2></Banner2>
         </div>
     );
 };
