@@ -6,8 +6,8 @@ import { FaFacebookSquare, FaInstagramSquare, FaTwitterSquare } from 'react-icon
 
 const Footer = () => {
     return (
-        <Container className='bg-dark text-light'>
-            <Row>
+        <Container className='bg-dark text-light rounded'>
+            <Row xs={1} lg={2}>
                 <Col>
                     <div className='my-4'>
                         <img style={{ width: '200px', height: '50px' }} src={logo} alt="" />
@@ -25,7 +25,7 @@ const Footer = () => {
                     </div>
                 </Col>
                 <Col>
-                    <h4 className='text-center my-4'>Contact us</h4>
+                    <h4 className='text-center my-4'>Message us</h4>
                     <div>
                         <Form>
                             <Form.Group controlId="formBasicEmail">

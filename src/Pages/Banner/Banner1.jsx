@@ -6,7 +6,7 @@ const Banner1 = () => {
     return (
         <Row xs={1} lg={3} >
             <Col>
-                <Card className="subscriber bg-danger bg-opacity-75 text-light">
+                <Card className="mb-2 subscriber bg-danger bg-opacity-75 text-light">
                     <Card.Body>
                         <Card.Title>
                             <h1>Subscribers</h1>
@@ -18,7 +18,7 @@ const Banner1 = () => {
                 </Card>
             </Col>
             <Col>
-                <Card className='bg-warning bg-opacity-50 text-danger'>
+                <Card className='mb-2 bg-warning bg-opacity-50 text-danger'>
                     <Card.Body>
                         <Card.Title>
                             <h1>Total views</h1>
@@ -30,7 +30,7 @@ const Banner1 = () => {
                 </Card>
             </Col>
             <Col>
-                <Card className='bg-primary bg-opacity-50 text-light'>
+                <Card className='mb-2 bg-primary bg-opacity-50 text-light'>
                     <Card.Body>
                         <Card.Title>
                             <h1>Likes</h1>

@@ -5,7 +5,7 @@ const Banner2 = () => {
     const cardShadow = "0px 0px 10px rgba(0, 0, 0, 0.5)";
     return (
         <Row xs={1} lg={3} className='mb-5'>
-        <Col>
+        <Col className='mb-4'>
             <Card style={{boxShadow: cardShadow}}>
                 <Card.Body>
                     <div className='text-center'>
@@ -20,7 +20,7 @@ const Banner2 = () => {
                 </Card.Body>
             </Card>
         </Col>
-        <Col>
+        <Col className='mb-4'>
             <Card style={{boxShadow: cardShadow}}>
                 <Card.Body>
                     <div className='text-center'>
@@ -35,7 +35,7 @@ const Banner2 = () => {
                 </Card.Body>
             </Card>
         </Col>
-        <Col>
+        <Col className='mb-4'>
             <Card style={{boxShadow: cardShadow}}>
                 <Card.Body>
                     <div className='text-center'>
