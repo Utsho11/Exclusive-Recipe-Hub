@@ -22,10 +22,12 @@ const Home = () => {
     return (
         <div>
             <div className='my-4 d-flex'>
-                <LazyLoad>
+                <div>
+                    <LazyLoad>
                 <img style={{height:'450px'}} className='img-fluid w-100' src={food} alt="" />
                 </LazyLoad>
-                <div className='bg-dark  w-50 text-light text-center'>
+                </div>
+                <div>
                     <img style={{height:'450px'}} className='img-fluid w-100' src={text} alt="" />
                     <Button style={{position:'absolute',bottom:'-100px',right:'460px'}} variant='warning'>Find Out Recipe</Button>
                 </div>
