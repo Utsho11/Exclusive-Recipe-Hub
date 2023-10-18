@@ -39,8 +39,8 @@ const Login = () => {
         setShow(event.target.checked)
     }
     return (
-        <Container className='w-50 mx-auto my-4 border'>
-        <h3 className='text-center my-3'>Please Login</h3>
+        <Container className='w-50 mx-auto border'>
+        <h3 className='text-center my-4'>Please Login</h3>
         <Form onSubmit={handleLogin}>
             <Form.Group className="my-3">
                 <Form.Label>Email address</Form.Label>

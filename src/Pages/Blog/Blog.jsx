@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='bg-warning p-3 m-4 border rounded bg-opacity-50'>
+        <div className='bg-warning p-3 border rounded bg-opacity-50'>
             <h4>1. Differences between uncontrolled and controlled components.</h4>
             <b>Ans:</b> <p>Uncontrolled components are not regulated or managed, can operate unpredictably and may not meet desired standards, and can have a negative impact on the system if they malfunction. Controlled components, on the other hand, are managed, designed to meet specific performance requirements, reliable, work in conjunction with other components, and require regular monitoring and management.</p>
             <h4>2. How to validate React props using PropTypes.</h4>

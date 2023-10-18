@@ -51,7 +51,7 @@ const Register = () => {
         setAccepted(event.target.checked)
     }
     return (
-        <Container className='w-50 mx-auto my-4 border'>
+        <Container className='w-50 mx-auto border'>
             <h3 className='text-center my-3'>Please Register</h3>
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3">

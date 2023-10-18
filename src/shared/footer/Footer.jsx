@@ -6,11 +6,11 @@ import { FaFacebookSquare, FaInstagramSquare, FaTwitterSquare } from 'react-icon
 
 const Footer = () => {
     return (
-        <Container className='bg-dark text-light rounded'>
+        <div className='bg-dark text-light mt-4 px-4'>
             <Row xs={1} lg={2}>
                 <Col>
-                    <div className='my-4'>
-                        <img style={{ width: '200px', height: '50px' }} src={logo} alt="" />
+                    <div className='my-4 g-5'>
+                        <img style={{ width: '200px', height: '200px', borderRadius:'50%'}} src={logo} alt="" />
                         <h3 className='my-2'>About us</h3>
                         <p><small>
                             This is an indian latest recipe cooking website which contains recipe of some of india's  most famous chef. All of recipes are created with the famous chef in mind, and I strive to make them as simple and straightforward as possible. Each recipe includes detailed instructions and ingredient lists, as well as photos to guide you through the cooking process.
@@ -25,27 +25,12 @@ const Footer = () => {
                     </div>
                 </Col>
                 <Col>
-                    <h4 className='text-center my-4'>Message us</h4>
-                    <div>
-                        <Form>
-                            <Form.Group controlId="formBasicEmail">
-                                <Form.Label>Email address</Form.Label>
-                                <Form.Control type="email" placeholder="Enter email" />
-                            </Form.Group>
-
-                            <Form.Group controlId="formBasicMessage">
-                                <Form.Label>Message</Form.Label>
-                                <Form.Control as="textarea" rows={5} placeholder="Enter message" />
-                            </Form.Group>
-
-                            <Button className='my-2' variant="primary" type="submit">
-                                Submit
-                            </Button>
-                        </Form>
-                    </div>
+                    <h1 style={{marginTop:"250px"}}>Contact us:</h1>
+                    <p><span class="fw-bolder">Email:</span> exclusiverecipehub@gmail.com</p>
+                    <p><span class="fw-bolder">Phone:</span> 018XXXXXXXXX</p>
                 </Col>
             </Row>
-        </Container>
+        </div>
     );
 };
 

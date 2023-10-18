@@ -2,13 +2,16 @@ import React, { useContext } from 'react';
 import { Container, Nav, NavDropdown, Navbar, Button } from 'react-bootstrap';
 import { FaGithub, FaGithubAlt, FaGithubSquare, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import logo from '../header/img/logo.png'
 import { AuthContext } from '../../Provider/AuthProvider';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import { HiMail } from "react-icons/hi";
 import ActiveLink from '../ActiveRoute/ActiveLink';
+import logo from '../header/img/logo.png';
+
+
 
 const NavigationBar = () => {
+  
 
   const { logInWithGoogle,user,logOut,logInWithGithub } = useContext(AuthContext);
   const provider = new GoogleAuthProvider();
@@ -41,18 +44,18 @@ const NavigationBar = () => {
      .catch(error => console.log(error))
   }
   return (
-    <Container>
-      <Navbar bg="light" expand="lg">
+    <div>
+      <Navbar className='fixed-top' style={{backgroundColor: 'white'}}>
         <Container>
           <Navbar>
-            <img style={{ width: '200px', height: '50px' }} src={logo} alt="" />
+            <img style={{ width: '60px', height: '60px', borderRadius:'50%' }} src={logo} alt="" />
           </Navbar>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto gap-4 align-items-center text-decoration-none">
-              <ActiveLink to='/'><span className='text-dark text-decoration-none'>Home</span></ActiveLink>
-              <ActiveLink to='/blog'><span className='text-dark text-decoration-none'>Blog</span></ActiveLink>
-              <ActiveLink to='/aboutUs'> <span className='text-dark text-decoration-none'>About us</span></ActiveLink>
+            <Nav className="ms-auto gap-4 align-items-center">
+              <ActiveLink to='/'>Home</ActiveLink> | 
+              <ActiveLink to='/blog'>Blog</ActiveLink> | 
+              <ActiveLink to='/aboutUs'>About us</ActiveLink> | 
               {
                 user ?
                 <Button onClick={handleLogOut} variant='secondary' >Sign out</Button>
@@ -67,7 +70,7 @@ const NavigationBar = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </Container>
+    </div>
   );
 };
 

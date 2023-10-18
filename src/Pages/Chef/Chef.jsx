@@ -11,8 +11,8 @@ const Chef = (props) => {
     const { id, chef_name, chef_img, Numbers_of_recipes, Likes, experience } = props.chef;
 
     return (
-        <Col>
-            <Card>
+        <Col className='my-2'>
+            <Card style={{width:"20rem",height:"27rem"}}>
                 <LazyLoad height={300} offset={300}>
                 <Card.Img style={{height: '300px'}} variant="top" src={chef_img} />
                 </LazyLoad>
